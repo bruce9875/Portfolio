@@ -23,7 +23,7 @@ export function About() {
             </h2>
             <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Hey, Its Bruce. I’m a digital marketing professional with a background in Library and Information Science and a minor in Applied Arts from Fu Jen Catholic University. I’m interested in the intersection of marketing, data, technology, and design.
+                Hey, Its Bruce. I’m interested in coding and digital marketing with a background in Library and Information Science and a minor in Applied Arts from Fu Jen Catholic University. I’m interested in the intersection of marketing, data, technology, and design.
               </p>
               <p>
                 I started my career working with digital advertising and media performance, where I learned how to turn campaign data into insights and better decisions. Since then, I’ve explored different sides of digital advertising, from campaign operations and performance analysis to creative testing and optimization.
