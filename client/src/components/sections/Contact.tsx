@@ -54,7 +54,7 @@ export function Contact() {
             Get In Touch
           </h2>
           <p className="text-muted-foreground text-lg">
-            Have a project in mind or just want to say hi? I'm currently open to new opportunities.
+            Have a project in mind or just want to say hi? I'm currently open to new opportunities.(Sorry, This Service is currently down)
           </p>
         </motion.div>
 

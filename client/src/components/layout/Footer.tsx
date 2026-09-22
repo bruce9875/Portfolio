@@ -14,15 +14,30 @@ export function Footer() {
         </div>
 
         <div className="flex items-center gap-6">
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors p-2 hover:bg-secondary rounded-full">
+          <a
+            href="https://github.com/bruce9875?tab=repositories"
+            target="_blank"
+            rel="noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors p-2 hover:bg-secondary rounded-full"
+          >
             <Github className="h-5 w-5" />
             <span className="sr-only">GitHub</span>
           </a>
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors p-2 hover:bg-secondary rounded-full">
+          <a
+            href="https://www.linkedin.com/in/po-yu-chen-2a7521325/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors p-2 hover:bg-secondary rounded-full"
+          >
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
           </a>
-          <a href="#" className="text-muted-foreground hover:text-foreground transition-colors p-2 hover:bg-secondary rounded-full">
+          <a
+            href="https://twitter.com/yourusername"
+            target="_blank"
+            rel="noreferrer"
+            className="text-muted-foreground hover:text-foreground transition-colors p-2 hover:bg-secondary rounded-full"
+          >
             <Twitter className="h-5 w-5" />
             <span className="sr-only">Twitter</span>
           </a>

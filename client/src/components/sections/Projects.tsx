@@ -7,27 +7,27 @@ import { Button } from "@/components/ui/button";
 export function Projects() {
   const projects = [
     {
-      title: "Nova Dashboard",
-      description: "A comprehensive analytics dashboard for SaaS companies. Features real-time data visualization, dark mode, and a highly polished UI component library.",
-      tags: ["React", "TypeScript", "Recharts", "Tailwind CSS"],
+      title: "Campaign Performance Website",
+      description: "full-stack marketing analytics SaaS using Next.js and Supabase with claude code, with authentication, PostgreSQL data management, campaign tracking, A/B testing.",
+      tags: ["React", "TypeScript", "PostgreSQL", "Tailwind CSS"],
       /* Unsplash tech abstract */
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+      image: "Campaign.png",
       links: { github: "#", live: "#" }
     },
     {
-      title: "Aura E-Commerce",
-      description: "A headless e-commerce storefront with a custom shopping cart, seamless checkout experience, and animated page transitions.",
-      tags: ["Next.js", "Stripe", "Framer Motion", "PostgreSQL"],
+      title: "Meta Ad Performance Dashboard",
+      description: "This is a Meta Ad Performance Dashboard that tracks the effectiveness of ad campaigns across key KPIs such as impressions, clicks, engagements, conversions, and budget. It provides a complete funnel view—from awareness to engagement to purchases—along with demographic, geographic, and time-based insights.",
+      tags: ["Data Analysis", "PowerBi", "Funnel Analysis"],
       /* Unsplash sleek minimal product */
-      image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80",
+      image: "Meta ad.png",
       links: { github: "#", live: "#" }
     },
     {
-      title: "Flow Task Manager",
-      description: "A minimalist project management tool focused on keyboard shortcuts and rapid task entry for power users.",
-      tags: ["React", "Zod", "TanStack Query", "Node.js"],
+      title: "Advertising optimization",
+      description: "I served as the primary point of contact for major news media clients. I regularly reported on ad unit revenues and conversion rates, and conducted A/B testing to optimize ad configurations—helping publishers maximize monetization while maintaining a seamless user experience.",
+      tags: ["Data Analysis", "Excel","A/B Testing", "Advertising Optimization"],
       /* Unsplash clean desk setup */
-      image: "https://images.unsplash.com/photo-1481481600465-36a084196144?w=800&q=80",
+      image: "Work.png",
       links: { github: "#", live: "#" }
     }
   ];

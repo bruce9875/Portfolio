@@ -47,7 +47,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-display tracking-tight text-foreground leading-[1.1] mb-6"
           >
-            Crafting digital <br />
+            Building smarter <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
               experiences
             </span>
@@ -57,7 +57,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl"
           >
-            I'm a full-stack engineer specializing in building exceptional, high-quality websites and applications that feel genuinely premium.
+            I'm a digital marketing professional focused on advertising, data, and technology. I enjoy turning ideas and insights into digital experiences that are both useful and engaging.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4">
@@ -75,15 +75,15 @@ export function Hero() {
           <motion.div variants={itemVariants} className="flex items-center gap-6 mt-16 pt-8 border-t border-border/50">
             <span className="text-sm font-medium text-muted-foreground">Connect with me:</span>
             <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://github.com/bruce9875?tab=repositories" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://www.linkedin.com/in/po-yu-chen-2a7521325/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://twitter.com/yourusername" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </a>
