@@ -11,7 +11,7 @@ const smtpUser = process.env.SMTP_USER;
 const smtpPass = process.env.SMTP_PASS;
 const contactRecipient = process.env.CONTACT_TO_EMAIL; // where contact form emails should be sent
 
-let transporter: nodemailer.Transporter | undefined;
+let transporter: ReturnType<typeof nodemailer.createTransport> | undefined;
 if (smtpHost && smtpPort && smtpUser && smtpPass) {
   transporter = nodemailer.createTransport({
     host: smtpHost,
