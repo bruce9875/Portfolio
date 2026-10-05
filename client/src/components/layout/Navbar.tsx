@@ -19,9 +19,10 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Projects", href: "/projects" },
   ];
 
   return (
@@ -61,9 +62,6 @@ export function Navbar() {
             >
               <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            </Button>
-            <Button asChild className="rounded-full font-medium shadow-md shadow-primary/20">
-              <a href="#contact">Hire Me</a>
             </Button>
           </nav>
 
@@ -109,11 +107,6 @@ export function Navbar() {
                   {link.name}
                 </a>
               ))}
-              <Button asChild className="w-full mt-2">
-                <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
-                  Hire Me
-                </a>
-              </Button>
             </div>
           </motion.div>
         )}

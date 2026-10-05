@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, Github, Linkedin } from "lucide-react";
 
 export function Hero() {
   const containerVariants = {
@@ -83,10 +83,6 @@ export function Hero() {
               <a href="https://www.linkedin.com/in/po-yu-chen-2a7521325/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
-              </a>
-              <a href="https://twitter.com/yourusername" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
               </a>
             </div>
             </motion.div>

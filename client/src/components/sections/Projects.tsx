@@ -1,106 +1,157 @@
 import { motion } from "framer-motion";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export function Projects() {
+type ProjectsProps = {
+  standalone?: boolean;
+};
+
+export function Projects({ standalone = false }: ProjectsProps) {
   const projects = [
     {
-      title: "Campaign Performance Website",
-      description: "full-stack marketing analytics SaaS using Next.js and Supabase with claude code, with authentication, PostgreSQL data management, campaign tracking, A/B testing.",
-      tags: ["React", "TypeScript", "PostgreSQL", "Tailwind CSS"],
-      /* Unsplash tech abstract */
-      image: "Campaign.png",
-      links: { github: "#", live: "#" }
+      title: "PulseBuild",
+      category: "CI/CD Monitoring",
+      description: "A fictional CI/CD monitoring dashboard that helps engineering teams detect, diagnose, and recover from failed builds and deployments. Track build health, inspect pipeline steps, logs, and test results, then retry or assign incidents and follow releases across Production, Staging, and Dev.",
+      caseStudy: "PulseBuild brings the diagnostic workflow into one place: find a failed run, inspect its pipeline, logs, and tests, retry the build, and review deployment history. Conceptual integrations include GitHub, Slack, Docker Hub, and Sentry, with incident actions for ownership, copied errors, and ticket creation.",
+      tags: ["Figma", "CI/CD", "Build Diagnostics", "Deployment Monitoring"],
+      image: "CI:CD.png",
+      links: { github: "#", live: "https://www.figma.com/community/file/1688820382356435583/pulsebuild?fuid=1400340212890280033" }
     },
     {
       title: "Meta Ad Performance Dashboard",
+      category: "Paid Media Analytics",
       description: "This is a Meta Ad Performance Dashboard that tracks the effectiveness of ad campaigns across key KPIs such as impressions, clicks, engagements, conversions, and budget. It provides a complete funnel view—from awareness to engagement to purchases—along with demographic, geographic, and time-based insights.",
+      caseStudy: "The dashboard organizes campaign results into funnel, audience, location, and time-based views so performance changes are easier to investigate.",
       tags: ["Data Analysis", "PowerBi", "Funnel Analysis"],
-      /* Unsplash sleek minimal product */
       image: "Meta ad.png",
       links: { github: "#", live: "#" }
     },
     {
-      title: "Advertising optimization",
-      description: "I served as the primary point of contact for major news media clients. I regularly reported on ad unit revenues and conversion rates, and conducted A/B testing to optimize ad configurations—helping publishers maximize monetization while maintaining a seamless user experience.",
-      tags: ["Data Analysis", "Excel","A/B Testing", "Advertising Optimization"],
-      /* Unsplash clean desk setup */
-      image: "Work.png",
-      links: { github: "#", live: "#" }
+      title: "FORME",
+      category: "Frontend Portfolio Project",
+      description: "A fictional premium lifestyle e-commerce experience built to showcase visual design and frontend craftsmanship. It features responsive product browsing, filtering, sorting, variants, cart, and checkout, with polished motion, accessible states, and validated forms.",
+      caseStudy: "A design-led e-commerce experience built to demonstrate frontend craftsmanship, responsive UI, and thoughtful interaction design.",
+      tags: ["Next.js", "React", "TypeScript", "Responsive UI", "E-commerce"],
+      image: "forme.png",
+      links: { github: "#", live: "https://e-commerce-store-mock.vercel.app/" }
     }
   ];
 
   return (
-    <section id="projects" className="py-24 sm:py-32 bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className={`bg-secondary/30 ${standalone ? "pb-20 pt-28 sm:pb-28 sm:pt-36" : "py-24 sm:py-32"}`}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-16 md:mb-24"
+          className="mb-14 max-w-3xl md:mb-20"
         >
-          <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
-            Selected Projects
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl">
-            A collection of things I've built. From complex dashboards to marketing sites, focusing on the details that make software feel great to use.
+          {standalone && (
+            <nav aria-label="Breadcrumb" className="mb-10 text-sm text-muted-foreground">
+              <a href="/" className="transition-colors hover:text-foreground">Home</a>
+              <span className="mx-2">/</span>
+              <span aria-current="page" className="text-foreground">Projects</span>
+            </nav>
+          )}
+          <p className="mb-5 flex items-center gap-3 text-sm font-medium uppercase text-primary">
+            <span className="h-px w-8 bg-primary" />
+            Portfolio showcase
+          </p>
+          {standalone ? (
+            <h1 className="mb-5 text-4xl font-bold leading-tight font-display sm:text-5xl md:text-6xl">
+              Projects that turn ideas into useful experiences
+            </h1>
+          ) : (
+            <h2 className="mb-5 text-4xl font-bold leading-tight font-display sm:text-5xl md:text-6xl">
+              Projects that turn ideas into useful experiences
+            </h2>
+          )}
+          <p className="max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            A collection of work across product analytics, developer tools, and frontend experiences, built around clear insights and thoughtful execution.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="h-full flex flex-col overflow-hidden border-border/50 bg-card hover-elevate transition-all duration-300 group">
-                <div className="relative aspect-video overflow-hidden bg-muted">
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10 duration-500" />
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                </div>
-                
-                <CardContent className="flex-1 p-6">
-                  <h3 className="text-xl font-bold font-display mb-3 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mt-auto">
-                    {project.tags.map(tag => (
-                      <Badge key={tag} variant="outline" className="bg-background font-normal text-xs">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
+        <div className="mb-7 flex items-center justify-between border-b border-border/70 pb-4">
+          <h3 className="font-display text-xl font-semibold sm:text-2xl">Selected work</h3>
+          <span className="text-sm text-muted-foreground">{String(projects.length).padStart(2, "0")} projects</span>
+        </div>
 
-                <CardFooter className="px-6 pb-6 pt-0 flex gap-4">
-                  <Button variant="ghost" size="sm" className="h-9 px-3 -ml-3 text-muted-foreground hover:text-foreground" asChild>
-                    <a href={project.links.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </a>
-                  </Button>
-                  <Button variant="ghost" size="sm" className="h-9 px-3 text-muted-foreground hover:text-foreground" asChild>
-                    <a href={project.links.live} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </a>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </motion.div>
+        <div>
+          {projects.map((project, index) => (
+            <motion.article
+              key={project.title}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.55, delay: index * 0.08 }}
+              className="grid items-center gap-8 border-b border-border/70 py-10 first:pt-4 last:border-b-0 sm:gap-10 sm:py-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16"
+            >
+              <a
+                href={project.links.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${project.title}`}
+                className="group relative block aspect-[16/10] overflow-hidden rounded-lg border border-border/70 bg-muted"
+              >
+                <img
+                  src={`/${project.image}`}
+                  alt={`${project.title} preview`}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                />
+                <span className="absolute bottom-4 left-4 rounded-sm bg-background/90 px-3 py-1.5 text-xs font-medium uppercase text-foreground backdrop-blur-sm">
+                  {project.category}
+                </span>
+                <span className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-background/90 text-foreground opacity-0 transition-opacity group-hover:opacity-100">
+                  <ArrowUpRight className="h-5 w-5" />
+                </span>
+              </a>
+
+              <div>
+                <h3 className="mb-4 font-display text-2xl font-bold leading-tight sm:text-3xl">
+                  {project.title}
+                </h3>
+                <p className="mb-6 max-w-xl leading-relaxed text-muted-foreground">
+                  {project.description}
+                </p>
+                <div className="mb-7 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <Badge key={tag} variant="outline" className="bg-background/60 font-normal text-xs">
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+                <details className="group mb-5 border-t border-border/70 pt-4">
+                  <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-medium text-foreground [&::-webkit-details-marker]:hidden">
+                    Case study
+                    <ArrowUpRight className="h-4 w-4 transition-transform group-open:rotate-45" />
+                  </summary>
+                  <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
+                    {project.caseStudy}
+                  </p>
+                </details>
+                <div className="flex flex-wrap items-center gap-2">
+                  {project.links.live !== "#" && (
+                    <Button variant="outline" size="sm" className="h-9" asChild>
+                      <a href={project.links.live} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        {project.links.live.includes("figma.com") ? "View Figma File" : "Live Demo"}
+                      </a>
+                    </Button>
+                  )}
+                  {project.links.github !== "#" && (
+                    <Button variant="ghost" size="sm" className="h-9 text-muted-foreground" asChild>
+                      <a href={project.links.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" />
+                        Source Code
+                      </a>
+                    </Button>
+                  )}
+                </div>
+              </div>
+            </motion.article>
           ))}
         </div>
       </div>
