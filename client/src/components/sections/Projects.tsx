@@ -15,7 +15,7 @@ export function Projects({ standalone = false }: ProjectsProps) {
       description: "A fictional CI/CD monitoring dashboard that helps engineering teams detect, diagnose, and recover from failed builds and deployments. Track build health, inspect pipeline steps, logs, and test results, then retry or assign incidents and follow releases across Production, Staging, and Dev.",
       caseStudy: "PulseBuild brings the diagnostic workflow into one place: find a failed run, inspect its pipeline, logs, and tests, retry the build, and review deployment history. Conceptual integrations include GitHub, Slack, Docker Hub, and Sentry, with incident actions for ownership, copied errors, and ticket creation.",
       tags: ["Figma", "CI/CD", "Build Diagnostics", "Deployment Monitoring"],
-      image: "CI:CD.png",
+      image: "CI_CD.png",
       links: { github: "#", live: "https://www.figma.com/community/file/1688820382356435583/pulsebuild?fuid=1400340212890280033" }
     },
     {

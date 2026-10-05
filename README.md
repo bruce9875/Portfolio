@@ -1,37 +1,96 @@
-# Personal Portfolio Website
+# Bruce Portfolio
 
-A responsive portfolio site for showcasing work across digital advertising, analytics, and frontend development. It includes About, Services, and Projects pages, plus a contact form.
+Bruce Portfolio is a modern personal portfolio website built to showcase Bruce's work, expertise, and professional brand across digital advertising, analytics, and frontend development.
+
+The site presents a polished, responsive experience for potential clients, collaborators, and employers. It includes sections for an introduction, services, featured work, and contact information so visitors can quickly understand Bruce's background and reach out.
+
+## Project Summary
+
+This project serves as a digital resume and marketing site in one. It is designed to:
+
+- highlight Bruce's experience and capabilities
+- present key services and areas of specialization
+- showcase selected projects and case studies
+- provide a clear way to contact him through LinkedIn and other channels
+- deliver a modern, mobile-friendly experience with smooth animations and theme support
 
 ## Features
 
-- Responsive pages with animated sections and theme support
-- Project and case-study showcase
-- Contact form with optional SMTP email delivery
+- Responsive single-page portfolio experience
+- About, Services, and Projects sections
+- Project showcase with visual case-study-style cards
+- Contact section with direct professional outreach links
+- Dark mode and light mode support
+- Smooth motion effects for a polished presentation
 
-## Built With
+## Tech Stack
 
-- React, TypeScript, and Vite
-- Tailwind CSS and shadcn/ui components
-- Express, Wouter, and Framer Motion
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Wouter for client-side routing
+- Framer Motion for animation
+- Lucide React for icons
+
+## Project Structure
+
+```text
+.
+├── client/
+│   ├── public/          # static assets and images
+│   └── src/
+│       ├── components/ # reusable UI and page sections
+│       ├── hooks/      # theme and utility hooks
+│       ├── pages/      # route-based pages
+│       ├── App.tsx     # app router setup
+│       └── main.tsx    # entry point
+├── package.json
+├── vite.config.*
+├── tailwind.config.*
+├── tsconfig.*
+├── README.md
+└── vercel.json
+```
 
 ## Local Development
 
-Requires Node.js and npm.
+Requirements:
 
-```sh
+- Node.js
+- npm
+
+Install dependencies and start the app:
+
+```bash
 npm install
-cp .env.example .env
 npm run dev
 ```
 
-Add valid SMTP settings to `.env` to enable contact-form email delivery. Keep real credentials in `.env` and never commit them.
+The site runs locally on:
 
-To create a production build:
+```text
+http://localhost:5000
+```
 
-```sh
+## Production Build
+
+To generate a production build:
+
+```bash
 npm run build
+```
+
+To run TypeScript validation:
+
+```bash
+npm run check
 ```
 
 ## Deployment
 
-The repository includes a Vercel configuration. Import the repository into Vercel and use the configured build settings. Add any required SMTP values through the Vercel project's Environment Variables settings; do not put secret values in source files or this README.
+This project includes Vercel configuration and can be deployed directly to Vercel by importing the repository into the Vercel dashboard and using the configured build settings.
+
+## License
+
+This project is licensed under the MIT License.
